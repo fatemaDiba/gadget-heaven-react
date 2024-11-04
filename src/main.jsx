@@ -6,6 +6,7 @@ import Root from "./Root";
 import Home from "./pages/home/Home";
 import Statistics from "./pages/statistics/Statistics";
 import Dashboard from "./pages/dashboard/Dashboard";
+import ItemDetails from "./pages/details/ItemDetails";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
+      },
+      {
+        path: "/details",
+        element: <ItemDetails></ItemDetails>,
       },
     ],
   },
