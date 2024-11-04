@@ -5,3 +5,8 @@ font-sora {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  background: none !important;
+  color: inherit !important;
+}

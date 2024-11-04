@@ -1,0 +1,167 @@
+[
+  {
+    "product_id": "P001",
+    "product_title": "Apple iPhone 15 Pro Max",
+    "product_image": "https://example.com/iphone15promax.jpg",
+    "category": "Smartphones",
+    "price": 1299,
+    "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+    "specification": [
+      "6.7-inch Super Retina XDR display",
+      "A17 Bionic chip",
+      "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
+      "LiDAR Scanner",
+      "Up to 2TB storage"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Samsung Galaxy S23 Ultra",
+    "product_image": "https://example.com/galaxys23ultra.jpg",
+    "category": "Smartphones",
+    "price": 1199,
+    "description": "Samsung's top-of-the-line smartphone with amazing camera capabilities.",
+    "specification": [
+      "6.8-inch Dynamic AMOLED 2X display",
+      "Snapdragon 8 Gen 2 processor",
+      "Quad-camera setup (200MP Main, 10MP Periscope, 12MP Ultra-wide, 10MP Telephoto)",
+      "S Pen support",
+      "Up to 1TB storage"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P003",
+    "product_title": "Dell XPS 13 Laptop",
+    "product_image": "https://example.com/dellxps13.jpg",
+    "category": "Laptops",
+    "price": 999,
+    "description": "A compact and powerful laptop for all your professional needs.",
+    "specification": [
+      "13.4-inch FHD+ display",
+      "Intel Core i7 12th Gen",
+      "16GB RAM, 512GB SSD",
+      "Intel Iris Xe Graphics",
+      "Up to 12 hours battery life"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P004",
+    "product_title": "Apple MacBook Pro 14-inch",
+    "product_image": "https://example.com/macbookpro14.jpg",
+    "category": "Laptops",
+    "price": 1999,
+    "description": "The ultimate laptop for professionals and creatives.",
+    "specification": [
+      "14.2-inch Liquid Retina XDR display",
+      "Apple M2 Pro chip",
+      "16GB RAM, 512GB SSD",
+      "Battery life up to 17 hours"
+    ],
+    "availability": false,
+    "rating": 4.9
+  },
+  {
+    "product_id": "P005",
+    "product_title": "Sony WH-1000XM5 Wireless Headphones",
+    "product_image": "https://example.com/sonywh1000xm5.jpg",
+    "category": "Headphones",
+    "price": 399,
+    "description": "Industry-leading noise canceling headphones with superior sound quality.",
+    "specification": [
+      "Wireless over-ear design",
+      "Noise canceling with AI processing",
+      "30 hours battery life",
+      "Supports Hi-Res audio"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P006",
+    "product_title": "Apple iPad Pro 12.9-inch",
+    "product_image": "https://example.com/ipadpro129.jpg",
+    "category": "Tablets",
+    "price": 1099,
+    "description": "Apple's most powerful tablet with an incredible display.",
+    "specification": [
+      "12.9-inch Liquid Retina XDR display",
+      "Apple M2 chip",
+      "Up to 2TB storage",
+      "Supports Apple Pencil 2nd gen"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P007",
+    "product_title": "Samsung Galaxy Tab S9+",
+    "product_image": "https://example.com/galaxytabs9plus.jpg",
+    "category": "Tablets",
+    "price": 899,
+    "description": "A powerful Android tablet with a stunning AMOLED display.",
+    "specification": [
+      "12.4-inch Super AMOLED display",
+      "Snapdragon 8 Gen 2 processor",
+      "Up to 1TB storage",
+      "S Pen included"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P008",
+    "product_title": "Canon EOS R5 Camera",
+    "product_image": "https://example.com/canoneosr5.jpg",
+    "category": "Cameras",
+    "price": 3899,
+    "description": "Professional mirrorless camera with outstanding resolution and video capabilities.",
+    "specification": [
+      "45MP full-frame sensor",
+      "8K video recording",
+      "Dual Pixel CMOS AF",
+      "5-axis in-body stabilization",
+      "Weather-sealed body"
+    ],
+    "availability": false,
+    "rating": 4.9
+  },
+  {
+    "product_id": "P009",
+    "product_title": "Apple Watch Series 9",
+    "product_image": "https://example.com/applewatchseries9.jpg",
+    "category": "Wearables",
+    "price": 399,
+    "description": "Stay connected, healthy, and active with Apple's latest smartwatch.",
+    "specification": [
+      "1.9-inch Always-On Retina display",
+      "S9 SiP chip",
+      "Advanced health tracking (ECG, SpO2)",
+      "Water-resistant up to 50 meters"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P010",
+    "product_title": "Fitbit Charge 6",
+    "product_image": "https://example.com/fitbitcharge6.jpg",
+    "category": "Wearables",
+    "price": 149,
+    "description": "An advanced fitness tracker to keep you on track with your health goals.",
+    "specification": [
+      "AMOLED touch display",
+      "Heart rate monitoring",
+      "Sleep and stress tracking",
+      "Battery life up to 7 days",
+      "Water-resistant up to 50 meters"
+    ],
+    "availability": true,
+    "rating": 4.5
+  }
+]
