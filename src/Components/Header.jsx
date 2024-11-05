@@ -1,22 +1,39 @@
 import { IoCartOutline } from "react-icons/io5";
 import { IoIosHeartEmpty } from "react-icons/io";
-import { NavLink } from "react-router-dom";
-const navList = (
-  <>
-    <li>
-      <NavLink to="/">Home</NavLink>
-    </li>
-    <li>
-      <NavLink to="/statistics">Statistics</NavLink>
-    </li>
-    <li>
-      <NavLink to="/dashboard">Dashboard</NavLink>
-    </li>
-  </>
-);
+import { NavLink, useLocation } from "react-router-dom";
 const Header = () => {
+  const { pathname } = useLocation();
+  const ActiveStyle = ({ isActive }) =>
+    isActive && pathname === "/"
+      ? "text-white underline font-bold"
+      : isActive
+      ? "text-[#9538E2] font-bold"
+      : "";
+  const navList = (
+    <>
+      <li>
+        <NavLink className={ActiveStyle} to="/">
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className={ActiveStyle} to="/statistics">
+          Statistics
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className={ActiveStyle} to="/dashboard">
+          Dashboard
+        </NavLink>
+      </li>
+    </>
+  );
   return (
-    <div className="container w-11/12 mx-auto mt-6">
+    <div
+      className={`container w-10/12 mx-auto mt-5 ${
+        pathname === "/" ? "absolute left-0 right-0" : ""
+      } `}
+    >
       <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -43,7 +60,7 @@ const Header = () => {
               {navList}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl font-bold">Gadget Heaven</a>
+          <a className="text-xl font-bold">Gadget Heaven</a>
         </div>
         <div className="navbar-center hidden lg:flex text-[#0B0B0BB3] text-base font-semibold">
           <ul className="menu menu-horizontal px-1">{navList}</ul>

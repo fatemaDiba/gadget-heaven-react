@@ -5,7 +5,7 @@ const Banner = () => {
     <div className="container w-11/12 mx-auto mb-24">
       <div className="border border-[#F6F6F6] p-2 rounded-3xl">
         <div className="bg-[#9538E2] rounded-2xl pb-64 flex flex-col justify-center items-center text-center text-white py-10 space-y-10">
-          <h1 className="text-5xl font-bold w-2/3">
+          <h1 className="text-5xl font-bold w-2/3 mt-14">
             Upgrade Your Tech Accessorize with Gadget Heaven Accessories
           </h1>
           <p className="text-base  w-2/4">
