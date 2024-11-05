@@ -1,28 +1,28 @@
 import { IoCartOutline } from "react-icons/io5";
 import { IoIosHeartEmpty } from "react-icons/io";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 const Header = () => {
   const { pathname } = useLocation();
   const ActiveStyle = ({ isActive }) =>
     isActive && pathname === "/"
-      ? "text-white underline font-bold"
+      ? "text-white underline font-bold bg-none"
       : isActive
       ? "text-[#9538E2] font-bold"
       : "";
   const navList = (
     <>
       <li>
-        <NavLink className={ActiveStyle} to="/">
+        <NavLink to="/" className={ActiveStyle}>
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink className={ActiveStyle} to="/statistics">
+        <NavLink to="/statistics" className={ActiveStyle}>
           Statistics
         </NavLink>
       </li>
       <li>
-        <NavLink className={ActiveStyle} to="/dashboard">
+        <NavLink to="/dashboard" className={ActiveStyle}>
           Dashboard
         </NavLink>
       </li>
@@ -55,15 +55,22 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-32 p-2 shadow"
+              className="gap-6 menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-32 p-2 shadow"
             >
               {navList}
             </ul>
           </div>
-          <a className="text-xl font-bold">Gadget Heaven</a>
+          <Link
+            to="/"
+            className={`text-xl font-bold ${
+              pathname === "/" ? "text-white" : "text-[#0B0B0B]"
+            }`}
+          >
+            Gadget Heaven
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex text-[#0B0B0BB3] text-base font-semibold">
-          <ul className="menu menu-horizontal px-1">{navList}</ul>
+          <ul className="gap-6 menu-horizontal px-1">{navList}</ul>
         </div>
         <div className="navbar-end gap-3">
           <button className="border border-[#0B0B0B1A] bg-white text-xl p-2 rounded-full">
