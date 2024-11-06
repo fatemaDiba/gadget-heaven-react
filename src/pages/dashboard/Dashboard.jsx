@@ -1,6 +1,7 @@
 import { PiSliders } from "react-icons/pi";
 import CartItem from "./CartItem";
 import WishItem from "./WishItem";
+import { useLoaderData } from "react-router-dom";
 const Dashboard = () => {
   return (
     <div>

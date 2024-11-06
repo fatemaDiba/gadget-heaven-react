@@ -1,7 +1,35 @@
 import Banner from "./Banner";
 import ItemCard from "./ItemCard";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [gadgets, setGadgets] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [filterData, setFilterData] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  useEffect(() => {
+    fetch("/gadget.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setGadgets(data);
+        setFilterData(data);
+        const UniqueCategories = data
+          .map((item) => item.category)
+          .filter((value, index, self) => self.indexOf(value) === index);
+        setCategories(UniqueCategories);
+      });
+  }, []);
+
+  const handleCategories = (category) => {
+    const byCategory = gadgets.filter((item) => item.category === category);
+    setFilterData(byCategory);
+    setSelectedCategory(category);
+  };
+  const handleShowAllCategory = () => {
+    setFilterData(gadgets);
+    setSelectedCategory(null);
+  };
+
   return (
     <div className="mb-10">
       <Banner></Banner>
@@ -9,31 +37,38 @@ const Home = () => {
         Explore Cutting-Edge Gadgets
       </h2>
       <div className="flex gap-10 container w-10/12 mx-auto">
-        <div className="w-2/12 flex flex-col gap-3 p-4 border border-[#09080F1A] rounded-xl drop-shadow-md">
-          <button className="bg-[#9538E2] px-3 py-2 font-semibold test-base rounded-full">
+        <div className=" w-2/12 flex flex-col self-start gap-3 p-4 border border-[#09080F1A] rounded-xl drop-shadow-md">
+          <button
+            onClick={handleShowAllCategory}
+            className={`${
+              !selectedCategory
+                ? "bg-[#9538E2] text-white"
+                : "bg-[#09080F0D] text-[#09080F99]"
+            } px-3 py-2 font-semibold test-base rounded-full`}
+          >
             All Product
           </button>
-          <button className="bg-[#09080F0D] px-3 py-2 font-semibold test-base text-[#09080F99] rounded-full">
-            Laptops
-          </button>
-          <button className="bg-[#09080F0D] px-3 py-2 font-semibold test-base text-[#09080F99] rounded-full">
-            Phones
-          </button>
-          <button className="bg-[#09080F0D] px-3 py-2 font-semibold test-base text-[#09080F99] rounded-full">
-            Accessories
-          </button>
-          <button className="bg-[#09080F0D] px-3 py-2 font-semibold test-base text-[#09080F99] rounded-full">
-            Smart Watches
-          </button>
-          <button className="bg-[#09080F0D] px-3 py-2 font-semibold test-base text-[#09080F99] rounded-full">
-            MacBook
-          </button>
+          {categories.map((category, index) => (
+            <button
+              key={index}
+              onClick={() => handleCategories(category)}
+              className={`${
+                selectedCategory === category
+                  ? "bg-[#9538E2] text-white"
+                  : "bg-[#09080F0D] text-[#09080F99]"
+              } px-3 py-2 font-semibold test-base rounded-full`}
+            >
+              {category}
+            </button>
+          ))}
         </div>
         {/* card */}
         <div className="w-10/12 grid grid-cols-3 gap-4">
-          <ItemCard></ItemCard>
-          <ItemCard></ItemCard>
-          <ItemCard></ItemCard>
+          {filterData?.map((gadget) => {
+            return (
+              <ItemCard key={gadget.product_id} gadget={gadget}></ItemCard>
+            );
+          })}
         </div>
       </div>
     </div>

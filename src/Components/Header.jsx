@@ -7,7 +7,7 @@ const Header = () => {
     isActive && pathname === "/"
       ? "text-white underline font-bold bg-none"
       : isActive
-      ? "text-[#9538E2] font-bold"
+      ? "text-[#9538E2] font-extrabold"
       : "";
   const navList = (
     <>
@@ -70,7 +70,13 @@ const Header = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex text-[#0B0B0BB3] text-base font-semibold">
-          <ul className="gap-6 menu-horizontal px-1">{navList}</ul>
+          <ul
+            className={`gap-6 menu-horizontal px-1 ${
+              pathname === "/" ? "text-white font-normal" : ""
+            }`}
+          >
+            {navList}
+          </ul>
         </div>
         <div className="navbar-end gap-3">
           <button className="border border-[#0B0B0B1A] bg-white text-xl p-2 rounded-full">

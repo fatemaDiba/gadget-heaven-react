@@ -1,8 +1,8 @@
 [
   {
     "product_id": "P001",
-    "product_title": "Apple iPhone 15 Pro Max",
-    "product_image": "https://example.com/iphone15promax.jpg",
+    "product_title": "iPhone 15 Pro",
+    "product_image": "https://i.ibb.co/MsRbcmc/img1.jpg",
     "category": "Smartphones",
     "price": 1299,
     "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
@@ -14,154 +14,226 @@
       "Up to 2TB storage"
     ],
     "availability": true,
-    "rating": 4.8
+    "rating": 3.8,
+    "discount": "10% off on accessories"
   },
   {
     "product_id": "P002",
-    "product_title": "Samsung Galaxy S23 Ultra",
-    "product_image": "https://example.com/galaxys23ultra.jpg",
+    "product_title": "Samsung S23 Ultra",
+    "product_image": "https://i.ibb.co/Pxbk52q/img2.webp",
     "category": "Smartphones",
     "price": 1199,
-    "description": "Samsung's top-of-the-line smartphone with amazing camera capabilities.",
+    "description": "The ultimate Galaxy experience, now with improved cameras.",
     "specification": [
       "6.8-inch Dynamic AMOLED 2X display",
-      "Snapdragon 8 Gen 2 processor",
-      "Quad-camera setup (200MP Main, 10MP Periscope, 12MP Ultra-wide, 10MP Telephoto)",
+      "Snapdragon 8 Gen 2",
+      "200MP Quad-camera",
       "S Pen support",
-      "Up to 1TB storage"
+      "1TB storage"
     ],
     "availability": true,
-    "rating": 4.7
+    "rating": 3.7,
+    "warranty": "1 year"
   },
   {
     "product_id": "P003",
-    "product_title": "Dell XPS 13 Laptop",
-    "product_image": "https://example.com/dellxps13.jpg",
-    "category": "Laptops",
+    "product_title": "Pixel 8 Pro",
+    "product_image": "https://i.ibb.co/X7tR7CH/img3.webp",
+    "category": "Smartphones",
     "price": 999,
-    "description": "A compact and powerful laptop for all your professional needs.",
+    "description": "Google's flagship phone with advanced AI features.",
     "specification": [
-      "13.4-inch FHD+ display",
-      "Intel Core i7 12th Gen",
-      "16GB RAM, 512GB SSD",
-      "Intel Iris Xe Graphics",
-      "Up to 12 hours battery life"
+      "6.7-inch LTPO OLED",
+      "Google Tensor G3 chip",
+      "50MP Triple-camera",
+      "Face Unlock",
+      "512GB storage"
     ],
     "availability": true,
     "rating": 4.6
   },
   {
     "product_id": "P004",
-    "product_title": "Apple MacBook Pro 14-inch",
-    "product_image": "https://example.com/macbookpro14.jpg",
-    "category": "Laptops",
-    "price": 1999,
-    "description": "The ultimate laptop for professionals and creatives.",
+    "product_title": "Sony WH-1000X",
+    "product_image": "https://i.ibb.co/4sFg7NS/img4.webp",
+    "category": "Headphones",
+    "price": 399,
+    "description": "Industry-leading noise-canceling wireless headphones.",
     "specification": [
-      "14.2-inch Liquid Retina XDR display",
-      "Apple M2 Pro chip",
-      "16GB RAM, 512GB SSD",
-      "Battery life up to 17 hours"
+      "Active Noise Cancellation",
+      "Up to 30 hours battery life",
+      "Quick charge support",
+      "Bluetooth 5.2"
     ],
-    "availability": false,
+    "availability": true,
     "rating": 4.9
   },
   {
     "product_id": "P005",
-    "product_title": "Sony WH-1000XM5 Wireless Headphones",
-    "product_image": "https://example.com/sonywh1000xm5.jpg",
+    "product_title": "Bose Earbuds II",
+    "product_image": "https://i.ibb.co/xYkc1Gs/img5.webp",
     "category": "Headphones",
-    "price": 399,
-    "description": "Industry-leading noise canceling headphones with superior sound quality.",
+    "price": 299,
+    "description": "Experience clear calls and powerful sound with Bose QC Earbuds.",
     "specification": [
-      "Wireless over-ear design",
-      "Noise canceling with AI processing",
-      "30 hours battery life",
-      "Supports Hi-Res audio"
-    ],
-    "availability": true,
-    "rating": 4.7
-  },
-  {
-    "product_id": "P006",
-    "product_title": "Apple iPad Pro 12.9-inch",
-    "product_image": "https://example.com/ipadpro129.jpg",
-    "category": "Tablets",
-    "price": 1099,
-    "description": "Apple's most powerful tablet with an incredible display.",
-    "specification": [
-      "12.9-inch Liquid Retina XDR display",
-      "Apple M2 chip",
-      "Up to 2TB storage",
-      "Supports Apple Pencil 2nd gen"
-    ],
-    "availability": true,
-    "rating": 4.8
-  },
-  {
-    "product_id": "P007",
-    "product_title": "Samsung Galaxy Tab S9+",
-    "product_image": "https://example.com/galaxytabs9plus.jpg",
-    "category": "Tablets",
-    "price": 899,
-    "description": "A powerful Android tablet with a stunning AMOLED display.",
-    "specification": [
-      "12.4-inch Super AMOLED display",
-      "Snapdragon 8 Gen 2 processor",
-      "Up to 1TB storage",
-      "S Pen included"
-    ],
-    "availability": true,
-    "rating": 4.6
-  },
-  {
-    "product_id": "P008",
-    "product_title": "Canon EOS R5 Camera",
-    "product_image": "https://example.com/canoneosr5.jpg",
-    "category": "Cameras",
-    "price": 3899,
-    "description": "Professional mirrorless camera with outstanding resolution and video capabilities.",
-    "specification": [
-      "45MP full-frame sensor",
-      "8K video recording",
-      "Dual Pixel CMOS AF",
-      "5-axis in-body stabilization",
-      "Weather-sealed body"
-    ],
-    "availability": false,
-    "rating": 4.9
-  },
-  {
-    "product_id": "P009",
-    "product_title": "Apple Watch Series 9",
-    "product_image": "https://example.com/applewatchseries9.jpg",
-    "category": "Wearables",
-    "price": 399,
-    "description": "Stay connected, healthy, and active with Apple's latest smartwatch.",
-    "specification": [
-      "1.9-inch Always-On Retina display",
-      "S9 SiP chip",
-      "Advanced health tracking (ECG, SpO2)",
-      "Water-resistant up to 50 meters"
-    ],
-    "availability": true,
-    "rating": 4.8
-  },
-  {
-    "product_id": "P010",
-    "product_title": "Fitbit Charge 6",
-    "product_image": "https://example.com/fitbitcharge6.jpg",
-    "category": "Wearables",
-    "price": 149,
-    "description": "An advanced fitness tracker to keep you on track with your health goals.",
-    "specification": [
-      "AMOLED touch display",
-      "Heart rate monitoring",
-      "Sleep and stress tracking",
-      "Battery life up to 7 days",
-      "Water-resistant up to 50 meters"
+      "Noise Reduction technology",
+      "Up to 6 hours battery",
+      "IPX4 water resistance"
     ],
     "availability": true,
     "rating": 4.5
+  },
+  {
+    "product_id": "P006",
+    "product_title": "MacBookAir M2",
+    "product_image": "https://i.ibb.co/Prp4bNP/img6.jpg",
+    "category": "Laptops",
+    "price": 1099,
+    "description": "Light and powerful laptop with the M2 chip.",
+    "specification": [
+      "13.6-inch Retina display",
+      "Apple M2 chip",
+      "256GB SSD",
+      "16GB RAM"
+    ],
+    "availability": false,
+    "rating": 3.8
+  },
+  {
+    "product_id": "P007",
+    "product_title": "Dell XPS",
+    "product_image": "https://i.ibb.co/4sSZ2r8/img7.webp",
+    "category": "Laptops",
+    "price": 1399,
+    "description": "Compact yet powerful laptop with a stunning display.",
+    "specification": [
+      "13.4-inch InfinityEdge display",
+      "Intel Core i7",
+      "1TB SSD",
+      "16GB RAM"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "color": "Silver"
+  },
+  {
+    "product_id": "P008",
+    "product_title": "Asus ROG G16",
+    "product_image": "https://i.ibb.co/qpdWhP5/img8.jpg",
+    "category": "Laptops",
+    "price": 1899,
+    "description": "High-performance gaming laptop with RGB lighting.",
+    "specification": [
+      "16-inch WQXGA 165Hz display",
+      "AMD Ryzen 9",
+      "512GB SSD",
+      "NVIDIA GeForce RTX 3070 Ti"
+    ],
+    "availability": true,
+    "rating": 2.7
+  },
+
+  {
+    "product_id": "P009",
+    "product_title": "OnePlus 11 Pro",
+    "product_image": "https://i.ibb.co/qgX9FPq/img9.webp",
+    "category": "Smartphones",
+    "price": 899,
+    "description": "Fast and smooth performance with OnePlus 11 Pro.",
+    "specification": [
+      "6.7-inch Fluid AMOLED display",
+      "Snapdragon 8 Gen 2",
+      "50MP Triple-camera system",
+      "5000mAh battery",
+      "256GB storage"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P010",
+    "product_title": "Xiaomi 13 Ultra",
+    "product_image": "https://i.ibb.co/fphJwD7/img10.webp",
+    "category": "Smartphones",
+    "price": 899,
+    "description": "Capture stunning photos with the Xiaomi Mi 13 Ultra.",
+    "specification": [
+      "6.73-inch LTPO OLED display",
+      "Snapdragon 8 Gen 2",
+      "50MP Quad-camera system",
+      "5000mAh battery",
+      "1TB storage"
+    ],
+    "availability": true,
+    "rating": 3.6,
+    "water_resistance": "IP68"
+  },
+  {
+    "product_id": "P011",
+    "product_title": "Oppo X6 Pro",
+    "product_image": "https://i.ibb.co/n3Cbnym/img11.jpg",
+    "category": "Smartphones",
+    "price": 899,
+    "description": "Advanced imaging and smooth performance with Oppo Find X6 Pro.",
+    "specification": [
+      "6.82-inch AMOLED display",
+      "MediaTek Dimensity 9000",
+      "50MP Triple-camera system",
+      "4800mAh battery",
+      "512GB storage"
+    ],
+    "availability": false,
+    "rating": 4.4
+  },
+  {
+    "product_id": "P012",
+    "product_title": "HP Spectre x360",
+    "product_image": "https://i.ibb.co/HBPjbRm/img12.webp",
+    "category": "Laptops",
+    "price": 1599,
+    "description": "Versatile and powerful 2-in-1 laptop with a stunning display.",
+    "specification": [
+      "13.5-inch OLED touch display",
+      "Intel Core i7",
+      "512GB SSD",
+      "16GB RAM"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "feature": "Convertible design"
+  },
+  {
+    "product_id": "P013",
+    "product_title": "Lenovo X1 Carbon",
+    "product_image": "https://i.ibb.co/TcdrvBC/img13.jpg",
+    "category": "Laptops",
+    "price": 1799,
+    "description": "Professional-grade laptop with a lightweight and durable design.",
+    "specification": [
+      "14-inch Full HD display",
+      "Intel Core i7",
+      "1TB SSD",
+      "16GB RAM"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "security_feature": "Fingerprint reader"
+  },
+  {
+    "product_id": "P014",
+    "product_title": "Microsoft Laptop 5",
+    "product_image": "https://i.ibb.co/GT5FLHm/img14.webp",
+    "category": "Laptops",
+    "price": 1499,
+    "description": "Sleek and powerful with a high-resolution PixelSense display.",
+    "specification": [
+      "13.5-inch PixelSense display",
+      "Intel Core i5",
+      "512GB SSD",
+      "8GB RAM"
+    ],
+    "availability": false,
+    "rating": 4.5,
+    "feature": "Touchscreen support"
   }
 ]
