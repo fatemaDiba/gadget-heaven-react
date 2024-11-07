@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import { CartContext } from "../../ContextApi/AddCartContext";
 import { wishlistContext } from "../../ContextApi/AddToWishlistContext";
+import { Helmet } from "react-helmet-async";
 
 const ItemDetails = () => {
   const [gadgetsData, setGadgetsData] = useState([]);
@@ -29,6 +30,9 @@ const ItemDetails = () => {
   } = gadgetsData;
   return (
     <div>
+      <Helmet>
+        <title>{`${product_title}`}-Gadget Heaven</title>
+      </Helmet>
       <div className="pb-40 bg-[#9538E2] py-10">
         <div className="text-white flex flex-col justify-center items-center">
           <h2 className="text-xl font-bold mb-2">Product Details</h2>

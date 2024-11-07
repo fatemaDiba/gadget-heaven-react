@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Banner from "./Banner";
 import ItemCard from "./ItemCard";
 import { useEffect, useState } from "react";
@@ -32,6 +33,9 @@ const Home = () => {
 
   return (
     <div className="mb-10">
+      <Helmet>
+        <title>Home-Gadget Heaven</title>
+      </Helmet>
       <Banner></Banner>
       <h2 className="text-2xl font-bold text-center mb-12">
         Explore Cutting-Edge Gadgets

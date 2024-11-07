@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Voucher = () => {
   const [voucher1, setVoucher1] = useState(false);
@@ -11,6 +12,9 @@ const Voucher = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Voucher-Gadget Heaven</title>
+      </Helmet>
       <div className="bg-[#9538E2] py-10 mb-10">
         <div className="text-white flex flex-col justify-center text-center items-center mb-10">
           <h3 className="text-2xl font-bold mb-3">Voucher</h3>

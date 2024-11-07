@@ -1,8 +1,13 @@
 import { IoCartOutline } from "react-icons/io5";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../ContextApi/AddCartContext";
+import { wishlistContext } from "../ContextApi/AddToWishlistContext";
 const Header = () => {
   const { pathname } = useLocation();
+  const { cartItem } = useContext(CartContext);
+  const { wishlistItem } = useContext(wishlistContext);
   const ActiveStyle = ({ isActive }) =>
     isActive && pathname === "/"
       ? "text-white underline font-bold bg-none"
@@ -84,10 +89,24 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <button className="border border-[#0B0B0B1A] bg-white text-xl p-2 rounded-full">
+          <button className="relative border border-[#0B0B0B1A] bg-white text-xl p-2 rounded-full">
+            {cartItem.length === 0 ? (
+              " "
+            ) : (
+              <span className="absolute text-xs z-5 -right-3 -top-3 border rounded-full bg-slate-200 py-0.5 px-2">
+                {cartItem.length}
+              </span>
+            )}
             <IoCartOutline />
           </button>
-          <button className="border border-[#0B0B0B1A] bg-white text-lg p-2 rounded-full">
+          <button className="relative border border-[#0B0B0B1A] bg-white text-lg p-2 rounded-full">
+            {wishlistItem.length === 0 ? (
+              " "
+            ) : (
+              <span className="absolute text-xs z-5 -right-3 -top-3 border rounded-full bg-slate-200 py-0.5 px-2">
+                {wishlistItem.length}
+              </span>
+            )}
             <IoIosHeartEmpty />
           </button>
         </div>

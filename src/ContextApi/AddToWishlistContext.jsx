@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 export const wishlistContext = createContext(null);
 const AddToWishlistContext = ({ children }) => {
   const [wishlistItem, setWishlistItem] = useState([]);
+
   const handleRemoveWishItem = (id, title) => {
     const updatedWishlistItem = wishlistItem.filter(
       (item) => item.product_id !== id

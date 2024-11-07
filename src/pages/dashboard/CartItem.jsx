@@ -4,10 +4,22 @@ import CartItemCard from "./components/CartItemCard";
 import { useContext } from "react";
 import { CartContext } from "../../ContextApi/AddCartContext";
 const CartItem = () => {
-  const { cartItem, handleRemoveCartItem } = useContext(CartContext);
+  const {
+    cartItem,
+    setCartItem,
+    handleRemoveCartItem,
+    totalCost,
+    handleSortByPrice,
+  } = useContext(CartContext);
   const navigate = useNavigate();
   const handleModalCloseBtn = () => {
+    setCartItem([]);
     navigate("/");
+  };
+  const handlePurchase = () => {
+    if (totalCost > 0) {
+      document.getElementById("my_modal_1").showModal();
+    }
   };
   return (
     <div>
@@ -20,7 +32,7 @@ const CartItem = () => {
             <p className="mb-2 text-[#09080F99] text-sm">
               Thanks for purchasing.
             </p>
-            <p className="text-[#09080F99] text-sm mb-5">Total: 2449.96</p>
+            <p className="text-[#09080F99] text-sm mb-5">Total: {totalCost}</p>
             <div className="w-full">
               <form method="dialog">
                 <button
@@ -37,12 +49,15 @@ const CartItem = () => {
       <div className="flex justify-between  mb-10">
         <p className="font-bold text-lg">Cart</p>
         <div className="flex justify-center items-center gap-3">
-          <p className="font-bold">Total cost: 999.99</p>
-          <button className="flex items-center gap-2 px-3 py-2 text-[#9538E2] font-semibold bg-white border text-sm border-[#9538E2] rounded-full">
+          <p className="font-bold">Total Cost: {totalCost}</p>
+          <button
+            onClick={handleSortByPrice}
+            className="flex items-center gap-2 px-3 py-2 text-[#9538E2] font-semibold bg-white border text-sm border-[#9538E2] rounded-full"
+          >
             Sort by Price <PiSliders className="text-lg" />
           </button>
           <button
-            onClick={() => document.getElementById("my_modal_1").showModal()}
+            onClick={handlePurchase}
             className="px-7 py-2 bg-[#9538E2] font-semibold text-white border text-sm border-white rounded-full"
           >
             Purchase

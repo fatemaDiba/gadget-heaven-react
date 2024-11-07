@@ -9,6 +9,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import ItemDetails from "./pages/details/ItemDetails";
 import Error from "./errorPage/Error";
 import Voucher from "./pages/voucher/Voucher";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,8 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <HelmetProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </HelmetProvider>
   </StrictMode>
 );

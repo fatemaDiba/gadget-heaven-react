@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import CartItem from "./CartItem";
 import WishItem from "./WishItem";
 import { useState } from "react";
@@ -15,6 +16,9 @@ const Dashboard = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>DashBoard-Gadget Heaven</title>
+      </Helmet>
       <div className="bg-[#9538E2] py-10 mb-10">
         <div className="text-white flex flex-col justify-center text-center items-center mb-10">
           <h3 className="text-2xl font-bold mb-3">Dashboard</h3>

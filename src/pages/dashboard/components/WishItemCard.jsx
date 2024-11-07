@@ -2,6 +2,10 @@ import { RxCross2 } from "react-icons/rx";
 
 const WishItemCard = ({ item, handleRemoveWishItem, handleAddToCartBtn }) => {
   const { product_title, product_id, product_image, price, description } = item;
+  const handleWishlistToCart = (item) => {
+    handleAddToCartBtn(item);
+    handleRemoveWishItem(item.product_id, item.product_title);
+  };
   return (
     <div>
       <div className="flex items-center justify-between border border-[#131313]/10 rounded-2xl p-6 container mx-auto mb-4">
@@ -19,7 +23,7 @@ const WishItemCard = ({ item, handleRemoveWishItem, handleAddToCartBtn }) => {
             </p>
             <p className="text-sm font-semibold">Price: $ {price}</p>
             <button
-              onClick={() => handleAddToCartBtn(item)}
+              onClick={() => handleWishlistToCart(item)}
               className="px-7 py-2 bg-[#9538E2] font-semibold text-white border text-sm   border-white rounded-full"
             >
               Add To Cart
