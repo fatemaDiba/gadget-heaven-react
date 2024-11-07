@@ -1,8 +1,10 @@
 import { PiSliders } from "react-icons/pi";
-
 import { useNavigate } from "react-router-dom";
 import CartItemCard from "./components/CartItemCard";
+import { useContext } from "react";
+import { CartContext } from "../../ContextApi/AddCartContext";
 const CartItem = () => {
+  const { cartItem, handleRemoveCartItem } = useContext(CartContext);
   const navigate = useNavigate();
   const handleModalCloseBtn = () => {
     navigate("/");
@@ -48,7 +50,15 @@ const CartItem = () => {
         </div>
       </div>
       <div>
-        <CartItemCard></CartItemCard>
+        {cartItem?.map((item) => {
+          return (
+            <CartItemCard
+              key={item.product_id}
+              item={item}
+              handleRemoveCartItem={handleRemoveCartItem}
+            ></CartItemCard>
+          );
+        })}
       </div>
     </div>
   );

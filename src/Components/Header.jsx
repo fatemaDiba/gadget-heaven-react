@@ -26,6 +26,11 @@ const Header = () => {
           Dashboard
         </NavLink>
       </li>
+      <li>
+        <NavLink to="/voucher" className={ActiveStyle}>
+          Voucher
+        </NavLink>
+      </li>
     </>
   );
   return (

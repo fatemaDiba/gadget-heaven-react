@@ -8,6 +8,7 @@ import Statistics from "./pages/statistics/Statistics";
 import Dashboard from "./pages/dashboard/Dashboard";
 import ItemDetails from "./pages/details/ItemDetails";
 import Error from "./errorPage/Error";
+import Voucher from "./pages/voucher/Voucher";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         path: "/dashboard",
 
         element: <Dashboard></Dashboard>,
+      },
+      {
+        path: "/voucher",
+        element: <Voucher></Voucher>,
       },
       {
         path: "/details/:id",

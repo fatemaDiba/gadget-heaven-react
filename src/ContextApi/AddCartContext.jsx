@@ -4,6 +4,12 @@ import { toast } from "react-toastify";
 export const CartContext = createContext(null);
 const AddCartContext = ({ children }) => {
   const [cartItem, setCartItem] = useState([]);
+  const [totalCost, setTotalCost] = useState(0);
+  const handleRemoveCartItem = (id, title) => {
+    const updatedCartItem = cartItem.filter((item) => item.product_id !== id);
+    setCartItem(updatedCartItem);
+    toast.error(`${title} has been removed from cart`);
+  };
   const handleAddToCartBtn = (gadgetData) => {
     const duplicateItem = cartItem.find(
       (item) => item.product_id === gadgetData.product_id
@@ -19,6 +25,7 @@ const AddCartContext = ({ children }) => {
     cartItem,
     setCartItem,
     handleAddToCartBtn,
+    handleRemoveCartItem,
   };
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
