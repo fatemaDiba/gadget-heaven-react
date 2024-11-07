@@ -1,10 +1,16 @@
 import { IoCartOutline } from "react-icons/io5";
 import { IoIosHeartEmpty } from "react-icons/io";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
+import { CartContext } from "../../ContextApi/AddCartContext";
+import { wishlistContext } from "../../ContextApi/AddToWishlistContext";
+
 const ItemDetails = () => {
   const [gadgetsData, setGadgetsData] = useState([]);
   const { id } = useParams();
+  const { handleAddToCartBtn } = useContext(CartContext);
+  const { handleWishlistBtn } = useContext(wishlistContext);
   useEffect(() => {
     fetch("/gadget.json")
       .then((res) => res.json())
@@ -18,7 +24,6 @@ const ItemDetails = () => {
     product_image,
     product_title,
     price,
-    category,
     specification,
     rating,
   } = gadgetsData;
@@ -54,43 +59,33 @@ const ItemDetails = () => {
             </ul>
             <p className="font-semibold text-lg">Rating ⭐ </p>
             <div className="flex items-center gap-4 mb-2">
-              <div className="rating rating-sm">
-                <input
-                  type="radio"
-                  name="rating-7"
-                  className="mask mask-star-2 bg-yellow-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-7"
-                  className="mask mask-star-2 bg-yellow-400"
-                  defaultChecked
-                />
-                <input
-                  type="radio"
-                  name="rating-7"
-                  className="mask mask-star-2 bg-yellow-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-7"
-                  className="mask mask-star-2 bg-yellow-400"
-                />
-                <input
-                  type="radio"
-                  name="rating-7"
-                  className="mask mask-star-2 bg-yellow-400"
-                />
+              <div>
+                {gadgetsData?.rating !== undefined && (
+                  <ReactStars
+                    count={5}
+                    value={gadgetsData.rating}
+                    edit={false}
+                    size={24}
+                    isHalf={true}
+                    activeColor="#ffd700"
+                  ></ReactStars>
+                )}
               </div>
               <div className="bg-[#09080F0D] px-3 py-2 rounded-full text-sm">
                 {rating}
               </div>
             </div>
             <div className="flex gap-3 items-center ">
-              <button className="text-sm font-semibold text-white flex gap-2 items-center py-2 px-6 rounded-full bg-[#9538E2]">
+              <button
+                onClick={() => handleAddToCartBtn(gadgetsData)}
+                className="text-sm font-semibold text-white flex gap-2 items-center py-2 px-6 rounded-full bg-[#9538E2]"
+              >
                 Add To Cart <IoCartOutline className="text-xl" />
               </button>
-              <button className="border border-[#0B0B0B1A] bg-white text-lg p-2 rounded-full">
+              <button
+                onClick={() => handleWishlistBtn(gadgetsData)}
+                className="border border-[#0B0B0B1A] bg-white text-lg p-2 rounded-full"
+              >
                 <IoIosHeartEmpty />
               </button>
             </div>

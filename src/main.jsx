@@ -7,11 +7,13 @@ import Home from "./pages/home/Home";
 import Statistics from "./pages/statistics/Statistics";
 import Dashboard from "./pages/dashboard/Dashboard";
 import ItemDetails from "./pages/details/ItemDetails";
+import Error from "./errorPage/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
